@@ -12,21 +12,57 @@ $(function(){
       pauseOnFocus: false,
       pauseOnHover: false
     });
-    
+    // https://terakoya.sejuku.net/programs/161/chapters/2187
+  $(function (){
+    $('.home').on('mouseover',function(){
+      $(this).animate({
+        opacity: 0.5,
+      }, 100);
+    });
+    $('.home').on('mouseout',function(){
+      $(this).animate({
+        opacity: 1.0,
+      }, 100);
+    });
+  });  
+  $(function (){
+    $('.hover-about').on('mouseover',function(){
+      $(this).animate({
+        opacity: 0.5,
+      }, 100);
+    });
+    $('.hover-about').on('mouseout',function(){
+      $(this).animate({
+        opacity: 1.0,
+      }, 100);
+    });
+  });  
+  $(function (){
+    $('.hover-works').on('mouseover',function(){
+      $(this).animate({
+        opacity: 0.5,
+      }, 100);
+    });
+    $('.hover-works').on('mouseout',function(){
+      $(this).animate({
+        opacity: 1.0,
+      }, 100);
+    });
   });
-
-// 参考：https://codepen.io/kzmytute/pen/LYpaOdL
-
-$(".course-item-img").click(function(){
-  $("#grayDisplay").html($(this).prop("outerHTML"));
-  $("#grayDisplay").fadeIn(200);
-  return false;
+  
 });
 
-$("#grayDisplay").click(function(){
-  $("#grayDisplay").fadeOut(200);
-  return false;
+$(window).scroll(function(){
+  if($(this).scrollTop() < 100){
+    // $('.top').css('display','none')
+    $('.top').fadeOut()
+
+  } else{
+      // $('.top').css('display','inline');
+      $('.top').fadeIn();
+    }
 });
+
 
 
 
