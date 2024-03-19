@@ -12,7 +12,7 @@ $(function(){
       pauseOnFocus: false,
       pauseOnHover: false
     });
-    // https://terakoya.sejuku.net/programs/161/chapters/2187
+    
   $(function (){
     $('.home').on('mouseover',function(){
       $(this).animate({
@@ -50,7 +50,33 @@ $(function(){
     });
   });
   
+  $('.modalImg').on('click', function () {
+    var imgSrc = $(this).children().attr('src');
+    $('.bigImg').children().attr('src', imgSrc);
+    $('.modal').fadeIn();
+    $('body,html').css('overflow-y', 'hidden');
+    return false
+    });
+
+  $('.close-button').click(function(){
+    $('.modal').fadeOut();
+    $('body,html').css('overflow-y', 'vidible')
+    return false;
+  });
+
+  // ページ内スクロール
+$('a[href^="#"]').click(function () {
+  const speed = 600;
+  let href = $(this).attr("href");
+  let target = $(href == "#" || href == "" ? "html" : href);
+  let position = target.offset().top;
+  $("body,html").animate({ scrollTop: position }, speed, "swing");
+  return false;
 });
+
+});
+
+
 
 $(window).scroll(function(){
   if($(this).scrollTop() < 100){
@@ -63,25 +89,12 @@ $(window).scroll(function(){
     }
 });
 
+$("")
 
 
 
-// ボタンをクリックしたらJavaScriptでクラスを付加する
-const modal = document.querySelector('.js-modal');
-const modalButton = document.querySelector('.modal-open');
-  // js-modal-button = modal-open
 
-const modalClose = document.querySelector('.close-button');
-// xボタンのjs-close-buttonを取得し変数に格納
 
-modalButton.addEventListener('click',() =>{
-  modal.classList.add('is-open');
-});
-  
-modalClose.addEventListener('click',() =>{
-   // xボタンをクリックしたときのイベントを登録
-  modal .classList.remove('is-open');
-});
 
 
   

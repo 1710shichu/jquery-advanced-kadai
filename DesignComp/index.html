@@ -27,10 +27,10 @@
       <div>
         <a href="index.html" class="home">My Profile</a>
       </div>
-      <div class="menu">
+      <section class="menu" id="menu">
         <a href="#about" class="hover-about">About</a>
         <a href="#works" class="hover-works">Works</a>
-      </div>
+      </section>
     </nav>
   </header>
   <main>
@@ -65,84 +65,36 @@
         </div>
       </section>
 
-      <!-- Works -->
-      <h1 id="works">Works</h1>
+       <!-- Works -->
+       <h1 id="works">Works</h1>
       <section class="works">
         <div class="item">
-          <button id="modal-open" class="modal-open" type="button"><img src="image/works1.png" alt="日本海"></button>
+          <a class="modalImg"><img src="image/works1.png" alt="日本海"></a>
           <p>新潟に訪れた際に、日本海の雄大さを魅了されて撮影した1枚</p>
-          </div>
-          <!-- モーダル本体 -->
-          <div class="layer js-modal">
-            <div class="modal">
-              <div class="modal-inner">
-                <!-- 閉じるボタン -->
-                <div class="close-button">×</div>
-                <div class="modal-contents">
-                  
-                  <!-- モーダル内のコンテンツ -->
-                  <div class="modal-contentbody">
-                    <img class="modal-works2" src="image/works3.png" alt="京都の街並み">
-                  </div>
-                </div>
-             </div>
-            </div>
-          </div>
-          </div>
+        </div>
 
         <!-- 左右に隙間を開けるために、"item_center"クラスを付与 -->
         <div class="item item_center">
-        <!-- <img src="image/works2.png" alt="冠雪した御嶽山"> -->
-        <!-- <button id="modal-open" class="modal-open" >冠雪した御嶽山</button> -->
-        <button id="modal-open" class="modal-open" type="button"><img src="image/works2.png" alt="冠雪した御嶽山"></button>
-        <p>地元長野の木曽町から撮影した、冠雪した御嶽山</p>
+          <a class="modalImg"><img src="image/works2.png" alt="冠雪した御嶽山"></a>
+          <p>地元長野の木曽町から撮影した、冠雪した御嶽山</p>
         </div>
-        <!-- モーダル本体 -->
-        <div class="layer js-modal">
-          <div class="modal">
-            <div class="modal-inner">
-              <!-- 閉じるボタン -->
-              <div class="close-button">×</div>
-              <div class="modal-contents">
-                
-                <!-- モーダル内のコンテンツ -->
-                <div class="modal-contentbody">
-                  <img class="modal-works2" src="image/works2.png" alt="冠雪した御嶽山">
-                </div>
-              </div>
-           </div>
-          </div>
-        </div>
-        </div>
-       
+
         <div class="item">
-        <button id="modal-open" class="modal-open" type="button"><img src="image/works3.png" alt="京都の街並み"></button>
-        <p>京都で撮影した、明け方の古き良き日本の町並み</p>
+          <a class="modalImg"><img src="image/works3.png" alt="京都の街並み">
+          <p>京都で撮影した、明け方の古き良き日本の町並み</p>
+        </div>   
+        <!-- コース画像のモーダル時のグレー背景 --> 
+       
+        <div class="modal">
+          <div class="bigImg"><img src="" alt=""></div>
+          <a class=close-button>×</a>
         </div>
-        <!-- モーダル本体 -->
-        <div class="layer js-modal">
-          <div class="modal">
-            <div class="modal-inner">
-              <!-- 閉じるボタン -->
-              <div class="close-button">×</div>
-              <div class="modal-contents">
-                
-                <!-- モーダル内のコンテンツ -->
-                <div class="modal-contentbody">
-                  <img class="modal-works2" src="image/works3.png" alt="京都の街並み">
-                </div>
-              </div>
-           </div>
-          </div>
-        </div>
-        </div>
-        
-        <!-- コース画像のモーダル時のグレー背景 -->
-        <div id="grayDisplay"></div>
+    
       </section>
+    
       <!-- TOPボタン -->
       <!-- <button class="top" id="top">top</button> -->
-      <a src="index.html" class="top" id="top">TOP</a>
+      <a href="#menu"class="top" id="menu">TOP</a>
     </article>
 
   </main>
